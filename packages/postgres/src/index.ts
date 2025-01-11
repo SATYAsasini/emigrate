@@ -266,7 +266,8 @@ export const createPostgresLoader = ({ connection }: PostgresLoaderOptions): Loa
 
         try {
           // @ts-expect-error The "simple" option is not documented, but it exists
-          await sql.file(migration.filePath, { simple: true });
+          const migrationQueryResult = await sql.file(migration.filePath, { simple: true });
+          console.log("Migration Querty Result : \n ", migrationQueryResult);
         } finally {
           await sql.end();
         }
