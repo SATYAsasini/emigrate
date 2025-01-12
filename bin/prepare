@@ -5,5 +5,5 @@ set -eu
 CI="${CI:-false}"
 
 if [ "$CI" != "true" ]; then
-  pnpm husky install
+  npm husky install
 fi
