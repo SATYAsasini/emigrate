@@ -5,5 +5,5 @@ set -eu
 CI="${CI:-false}"
 
 if [ "$CI" != "true" ]; then
-  npm husky install
+  npm install husky --save-dev
 fi
